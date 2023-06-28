@@ -1,0 +1,14 @@
+[
+    {
+        "name": "barcapp/add_user",
+        "parameters": [
+            {
+                "name": "username",
+                "type": "str",
+                "length": 10
+            }
+        ],
+        "mapped_command": "iptables -nL",
+        "method_type": "POST"
+    }
+]
