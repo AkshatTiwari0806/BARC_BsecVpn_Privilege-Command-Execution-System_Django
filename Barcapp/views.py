@@ -27,4 +27,3 @@ def add_user(request):
         return JsonResponse({"status": "failure", "message": "Invalid command", "status_code": 400})
     else:
         return JsonResponse({"status": "failure", "message": "Invalid request method", "status_code": 400})
-"kai re kya boltus tumi "
