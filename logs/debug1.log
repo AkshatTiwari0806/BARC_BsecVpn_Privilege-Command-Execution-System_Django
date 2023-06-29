@@ -1,0 +1,6 @@
+INFO 2023-06-29 20:54:31,951 autoreload 26690 139879589480256 Watching for file changes with StatReloader
+INFO 2023-06-29 20:54:49,382 basehttp 26690 139879317907008 "POST /barcapp/add_email HTTP/1.1" 200 2859
+INFO 2023-06-29 20:54:51,221 basehttp 26690 139879317907008 "POST /barcapp/add_email HTTP/1.1" 200 2859
+INFO 2023-06-29 20:54:53,760 basehttp 26690 139879317907008 "POST /barcapp/add_password HTTP/1.1" 200 84
+INFO 2023-06-29 20:56:11,835 autoreload 26690 139879589480256 /home/akshattiwari/Desktop/BARC_proj/Barc_main/settings.py changed, reloading.
+INFO 2023-06-29 20:56:12,556 autoreload 26882 140674911352640 Watching for file changes with StatReloader

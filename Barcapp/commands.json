@@ -1,6 +1,6 @@
 [
-    {
-        "name": "barcapp/add_user",
+    [{
+        "name": "/barcapp/add_user",
         "parameters": [
             {
                 "name": "username",
@@ -10,5 +10,29 @@
         ],
         "mapped_command": "iptables -nL",
         "method_type": "POST"
-    }
+    }],
+    [{
+        "name": "/barcapp/add_email",
+        "parameters": [
+            {
+                "name": "email",
+                "type": "str",
+                "length": 15
+            }
+        ],
+        "mapped_command": "netstat -s",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/add_password",
+        "parameters": [
+            {
+                "name": "password",
+                "type": "str",
+                "length": 10
+            }
+        ],
+        "mapped_command": "netstat -nupl",
+        "method_type": "POST"
+    }]
 ]

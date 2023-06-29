@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rd)kh%ppo#&f7@$i*=jy)@a7a%4hfv75=$mmfppc%9bf8q4v@o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -122,3 +123,34 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':['file1','file2'],
+            'level':'DEBUG'
+        }
+    },
+    'handlers':{
+        'file1':{
+            'level':'INFO',
+            'class': 'logging.FileHandler',
+            'filename':'./logs/debug1.log',
+            'formatter':'simple',
+        },
+        'file2':{
+            'level':'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename':'./logs/debug2.log',
+            'formatter':'simple',
+        }
+    },
+    'formatters':{
+        'simple': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        }
+
+    }
+}

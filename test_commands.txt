@@ -1,3 +1,5 @@
 curl -X POST http://127.0.0.1:8000/barcapp/add_user -d "username=random"
+curl -X POST http://127.0.0.1:8000/barcapp/add_email -d "useremail=random"
+curl -X POST http://127.0.0.1:8000/barcapp/add_password -d "userpassword=random"
 curl -X POST http://127.0.0.1:8000/barcapp/add_user -d '{"username": "random"}'
 curl -X POST http://127.0.0.1:8000/barcapp/add_user --user "akshat"
