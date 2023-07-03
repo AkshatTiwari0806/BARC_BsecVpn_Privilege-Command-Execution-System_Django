@@ -28,6 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+ACCESS_TOKEN = '08062002'
 
 # Application definition
 
