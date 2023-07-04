@@ -10,24 +10,17 @@ with open(commands_file_path) as json_file:
     data = json.load(json_file)
 
 
-
-from functools import wraps
-
 def token_required(view_func):
-    @wraps(view_func)
-    def _wrapped_view(request, *args, **kwargs):
+    def wrapper(request, *args, **kwargs):
         token = request.META.get('HTTP_AUTHORIZATION')
         if token == settings.ACCESS_TOKEN:
             return view_func(request, *args, **kwargs)
         else:
-            return JsonResponse({"status": "failure", "message": "Invalid token", "status_code": 401})
-    return _wrapped_view
+            return JsonResponse({"success": "FALSE", "message": "Incorrect token", "status_code": 401})
+    return wrapper
 
-
-
-
-@token_required
 @csrf_exempt
+@token_required
 def add_user(request):
     try:
         if request.method == 'POST':
@@ -70,6 +63,7 @@ def add_email(request):
     
 
 @csrf_exempt
+@token_required
 def add_password(request):
     try:
         if request.method == 'POST':

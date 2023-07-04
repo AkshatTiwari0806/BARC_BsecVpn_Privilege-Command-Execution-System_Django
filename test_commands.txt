@@ -12,6 +12,5 @@ curl -X POST http://127.0.0.1:8000/barcapp/add_user -d "username=randommmmmm"
 
 
 
-
-curl -X POST http://127.0.0.1:8000/add_user -H "Authorization: 08062002" -d "username=test"
-
+curl -X POST http://127.0.0.1:8000/barcapp/add_user -H "Authorization: 08062002" -d "username=random"
+curl -X GET http://127.0.0.1:8000/barcapp/add_user -H "Authorization: 08062002" -d "username=random"
