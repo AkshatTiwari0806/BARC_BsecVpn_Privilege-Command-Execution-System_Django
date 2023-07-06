@@ -1,6 +1,6 @@
 curl -X POST http://127.0.0.1:8000/barcapp/add_user -d "username=random"
-curl -X POST http://127.0.0.1:8000/barcapp/add_email -d "useremail=random"
-curl -X POST http://127.0.0.1:8000/barcapp/add_password -d "userpassword=random"
+curl -X POST http://127.0.0.1:8000/barcapp/add_email -H "Authorization: mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2" -d "useremail=random"
+curl -X POST http://127.0.0.1:8000/barcapp/add_password -H "Authorization: mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2" -d "userpassword=random"
 curl -X POST http://127.0.0.1:8000/barcapp/add_user -d '{"username": "random"}'
 curl -X POST http://127.0.0.1:8000/barcapp/add_user --user "akshat"
 
@@ -12,5 +12,7 @@ curl -X POST http://127.0.0.1:8000/barcapp/add_user -d "username=randommmmmm"
 
 
 
-curl -X POST http://127.0.0.1:8000/barcapp/add_user -H "Authorization: 08062002" -d "username=random"
-curl -X GET http://127.0.0.1:8000/barcapp/add_user -H "Authorization: 08062002" -d "username=random"
+curl -X POST http://127.0.0.1:8000/barcapp/add_user -H "Authorization: mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2" -d "username=random"
+curl -X GET http://127.0.0.1:8000/barcapp/add_user -H "Authorization: mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2" -d "username=random"
+
+curl -X POST http://127.0.0.1:8000/barcapp/add_user -H "Authorization: mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2" -d "username=Sam m% cname=CNAME m% site=gogle m% location=LOCATION"

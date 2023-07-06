@@ -28,7 +28,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-ACCESS_TOKEN = '08062002'
+ACCESS_TOKEN = 'mDdiUA7BDFh9bBrjOrjUC6Ak8NMMY0F2'
 
 # Application definition
 

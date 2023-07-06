@@ -6,16 +6,101 @@
                 "name": "username",
                 "type": "str",
                 "length": 10
+            },
+            {
+                "name": "cname",
+                "type": "str",
+                "length": 11 
+            },
+            {
+                "name": "site",
+                "type": "str",
+                "length": 5
+            },
+            {
+                "name": "location",
+                "type": "str",
+                "length": 12
             }
         ],
-        "mapped_command": "iptables -nL",
+        "mapped_command": "addUser -u %s -c %s -s %s -l %s",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/addFwRules",
+        "parameters": [
+            {
+                "name": "firewallno",
+                "type": "int",
+                "length": 10
+            },
+            {
+                "name": "ipno",
+                "type": "IPV4"
+            }
+        ],
+        "mapped_command": "addFwRules %d add %IPV4",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/deleteuser",
+        "parameters": [
+            {
+                "name": "username",
+                "type": "str",
+                "length": 15
+            }
+        ],
+        "mapped_command": "deleteUser -u %s",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/add_supervisor",
+        "parameters": [
+            {
+                "name": "name",
+                "type": "str",
+                "length": 15
+            }
+        ],
+        "mapped_command": "addSupervisorProgram -P %s",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/del_supervisor",
+        "parameters": [
+            {
+                "name": "name",
+                "type": "str",
+                "length": 15
+            }
+        ],
+        "mapped_command": "delSupervisorProgram -P %s",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/restart_supervisor",
+        "parameters": [],
+        "mapped_command": "restartSupervisor",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/showFwRules",
+        "parameters": [],
+        "mapped_command": "showFwRules",
+        "method_type": "POST"
+    }],
+    [{
+        "name": "/barcapp/netstat-ntplu",
+        "parameters": [],
+        "mapped_command": "netstat -ntplu",
         "method_type": "POST"
     }],
     [{
         "name": "/barcapp/add_email",
         "parameters": [
             {
-                "name": "email",
+                "name": "useremail",
                 "type": "str",
                 "length": 15
             }
@@ -27,7 +112,7 @@
         "name": "/barcapp/add_password",
         "parameters": [
             {
-                "name": "password",
+                "name": "userpassword",
                 "type": "str",
                 "length": 10
             }
